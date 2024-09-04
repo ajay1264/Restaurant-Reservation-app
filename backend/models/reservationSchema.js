@@ -19,7 +19,7 @@ const reservationSchema = new mongoose.Schema({
         required:true,
         validate: [validator.isEmail, "Provide a valid email"]
     },
-    lastName: {
+    phone: {
         type: String,
         required:true,
         minLength: [10, "Phone number must contain only 10 digit! "],
