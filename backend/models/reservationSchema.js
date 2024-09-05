@@ -32,6 +32,11 @@ const reservationSchema = new mongoose.Schema({
     date: {
         type: String,
         required:true,
+        validate: {
+            validator: function (value){
+                return value >= new Date().setHours(0,0,0,0);
+            }
+        }
     },
 
 
